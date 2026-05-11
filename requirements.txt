@@ -1,0 +1,5 @@
+brotli
+matplotlib
+numpy
+opencc-python-reimplemented
+python-docx
