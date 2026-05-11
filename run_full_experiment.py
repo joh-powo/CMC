@@ -43,7 +43,7 @@ plt.rcParams.update({
 # Configuration
 # ═══════════════════════════════════════════════════════════════
 
-PROJECT_DIR = Path(r"D:\李孜淇\Projects\CMC")
+PROJECT_DIR = Path(__file__).resolve().parent
 METRICS_OUT = PROJECT_DIR / "metrics"
 PLOTS_OUT   = PROJECT_DIR / "plots"
 LOGS_OUT    = PROJECT_DIR / "logs"

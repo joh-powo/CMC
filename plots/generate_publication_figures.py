@@ -104,7 +104,8 @@ FILES = ['繁体版出師表', '背影']
 FILE_LABELS = {'繁体版出師表': 'Chu Shi Biao\n(Traditional)', '背影': 'Bei Ying\n(Simplified)'}
 FILE_LABELS_SHORT = {'繁体版出師表': 'Chu Shi Biao', '背影': 'Bei Ying'}
 
-OUT_DIR = Path(r"D:\李孜淇\Projects\CMC\plots")
+OUT_DIR = Path(__file__).resolve().parent
+OUT_DIR.mkdir(exist_ok=True)
 
 # ═══════════════════════════════════════════════════════════════
 # Authoritative Data (from run_full_experiment.py RESULTS)

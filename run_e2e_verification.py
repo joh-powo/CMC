@@ -28,11 +28,24 @@ import brotli
 import docx
 import opencc
 
-PROJECT_DIR = Path(r"E:\研\李孜淇\Projects\CMC")
+PROJECT_DIR = Path(__file__).resolve().parent
 DATA_RAW    = PROJECT_DIR / "data_raw"
 CHAR_CSV    = PROJECT_DIR / "character.csv"
 OUTPUT_DIR  = PROJECT_DIR / "metrics"
 OUTPUT_DIR.mkdir(exist_ok=True)
+
+
+def require_input_docx(path):
+    """Fail early with setup guidance when benchmark documents are absent."""
+    if path.exists():
+        return
+    raise SystemExit(
+        f"\nInput document not found: {path}\n"
+        "The original benchmark .docx files are not shipped with this public "
+        "repository. Place your own .docx files under data_raw/ with the "
+        "expected filenames, or edit DATA_RAW / the run_pipeline() calls in "
+        "run_e2e_verification.py before running this script.\n"
+    )
 
 # ═══════════════════════════════════════════════════════════
 # 1. Wubi Table Loading
@@ -699,6 +712,7 @@ if __name__ == '__main__':
     results = []
 
     # Text 1: Traditional Chinese 出師表
+    require_input_docx(DATA_RAW / "繁体版出師表.docx")
     r1 = run_pipeline(
         DATA_RAW / "繁体版出師表.docx",
         "出師表(繁体)",
@@ -707,6 +721,7 @@ if __name__ == '__main__':
     results.append(r1)
 
     # Text 2: Simplified Chinese 背影
+    require_input_docx(DATA_RAW / "背影.docx")
     r2 = run_pipeline(
         DATA_RAW / "背影.docx",
         "背影(简体)",
