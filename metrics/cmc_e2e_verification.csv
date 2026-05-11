@@ -1,0 +1,15 @@
+﻿Metric,出師表-B方案(繁转简),出師表-A方案(繁体直编),背影(简体)
+Original chars,752,752,1305
+Wubi code length,2215,2233,3784
+Collision disambiguations,8,170,30
+Brotli compress ratio (%),47.9,47.7,43.3
+DNA length (nt),6195,6214,9607
+Storage density (b/nt),1.9422,1.9371,2.1734
+GC content (%),50.0,50.0,50.0
+Max homopolymer,2,2,2
+Bad motif ratio (%),0.0000,0.0000,0.0000
+Avg ΔG (kcal/mol),-30.6,-31.1,-27.8
+Min ΔG (kcal/mol),-43.9,-43.8,-31.2
+Min Hamming distance,76,81,80
+Wubi round-trip,PASS,PASS,PASS
+Text round-trip,PASS,PASS,PASS

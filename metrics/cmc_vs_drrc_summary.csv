@@ -1,0 +1,15 @@
+category,system,item,value,unit,basis,notes,source
+density,CMC,"Chu Shi Biao (Traditional, A direct)",1.94,bits/nt,project_measured,"Local result from current project main_result_table.csv",local_metrics
+density,CMC,"Chu Shi Biao (Traditional, B t2s)",1.94,bits/nt,project_measured,"Local result from current project main_result_table.csv",local_metrics
+density,CMC,"Bei Ying (Simplified)",2.17,bits/nt,project_measured,"Local result from current project main_result_table.csv",local_metrics
+constraints,CMC,Global GC,50.0,percent,project_measured,"All current CMC test outputs report 50.0 percent global GC",local_metrics
+constraints,CMC,Max homopolymer,2,nt,project_measured,"All current CMC test outputs keep the max homopolymer at 2 nt",local_metrics
+quality,CMC,Undesired motif rate,0.000,percent,project_measured,"Current motif_summary.csv reports zero undesired motifs for CMC",local_metrics
+robustness,CMC,"Min Hamming distance (reported range)",76-81,nt,project_measured,"Range across current local CMC comparison rows",local_metrics
+method,CMC,Pipeline,"Wubi + Brotli + constrained mixed-radix coding",,project_measured,"Chinese-text-oriented preprocessing and constrained DNA mapping",local_metrics
+density,DRRC,Coding potential,1.66,bits/nt,literature_reported,"Reported in Bioinformatics 2024 abstract and Table 1",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/
+density,DRRC,Net information density,1.352,bits/nt,literature_reported,"Reported in Bioinformatics 2024 Table 1 with index and ECC overhead",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/
+constraints,DRRC,Global GC,50,percent,literature_reported,"Paper states DRRC controls sequence GC content at 50 percent",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/
+constraints,DRRC,Max homopolymer,3,nt,literature_reported,"Paper states most DRRC sequences cluster at 3 nt and the rest at 2 nt",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/
+robustness,DRRC,Recovery at 2 percent mixed error,>90,percent,literature_reported,"Reported with Hamming-distance-based localization plus RS code",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/
+method,DRRC,Pipeline,"Chaotic first-bit balancing + dual-rule rotary coding + Hamming/RS",,literature_reported,"Paper benchmark uses generic binary files including PDF/image data",https://pmc.ncbi.nlm.nih.gov/articles/PMC10937898/

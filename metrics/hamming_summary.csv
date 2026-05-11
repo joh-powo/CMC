@@ -1,0 +1,12 @@
+﻿method,file,scheme,fragment_length_nt,min_hamming_distance
+CMC,繁体版出師表,B方案(繁转简),120,76
+CMC,繁体版出師表,A方案(繁体直编),120,81
+CMC,背影,简体存储,120,80
+YYC,繁体版出師表,,120,56
+YYC,背影,,120,41
+DNA Fountain,繁体版出師表,,120,17
+DNA Fountain,背影,,120,17
+HEDGES,繁体版出師表,,120,4
+HEDGES,背影,,120,4
+DRRC,繁体版出師表,,120,14
+DRRC,背影,,120,13
