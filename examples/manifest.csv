@@ -1,0 +1,8 @@
+filename,category,script_form,purpose,copyright_note
+quick_test.txt,smoke_test,Simplified Chinese,Minimal input for quickly checking that the pipeline starts and returns a short result,Author-written example
+simplified_modern.txt,simplified_modern,Simplified Chinese,Modern Simplified Chinese prose for ordinary text storage tests,Author-written example
+traditional_classical.txt,traditional_classical,Traditional Chinese,Classical-style Traditional Chinese input for direct Traditional processing,Public-domain classical-style sentence
+punctuation_mixed.txt,punctuation_restoration,Simplified Chinese with punctuation,Checks punctuation recording and restoration with brackets quotes numbers and punctuation,Author-written example
+mixed_alnum_symbols.txt,mixed_alnum_symbols,Chinese English digits and symbols,Checks mixed Chinese English words digits percent signs and hyphen-like symbols,Author-written example
+long_simplified_paragraph.txt,longer_input,Simplified Chinese,Longer paragraph for observing compression sequence length and constraint metrics,Author-written example
+traditional_variants.txt,traditional_variants,Traditional Chinese,Checks common Traditional characters and script preservation,Author-written example
