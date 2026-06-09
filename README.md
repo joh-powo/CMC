@@ -14,6 +14,39 @@ The original benchmark documents are not shipped with this repository due to cop
 
 The reported experiments used two Chinese prose benchmarks: Zhu Ziqing's *Bei Ying* and a Traditional Chinese version of *Chu Shi Biao*. The repository keeps the code, mapping tables, metrics, and figures, but not the raw `.docx` input files.
 
+## Example Inputs
+
+To address different user needs, the repository provides a lightweight `examples/` directory with **20 small test cases grouped by category**. These files are not used as the formal benchmark in the manuscript; they are small public test cases for choosing an input style, checking the local environment, and verifying text-handling behavior before running the full workflow. Any character outside the Wubi-86 dictionary (punctuation, Latin letters, digits, and line breaks) is recorded verbatim and restored on decode, so every example round-trips losslessly.
+
+| File | Use case | What it checks |
+|:--|:--|:--|
+| `examples/smoke_single_char.txt` | Smoke test (minimal) | Single-character input for the smallest possible round-trip check |
+| `examples/quick_test.txt` | Smoke test | Minimal Simplified Chinese input for confirming that the pipeline starts correctly |
+| `examples/simplified_modern.txt` | Simplified Chinese prose | Ordinary modern Chinese text storage |
+| `examples/simplified_news.txt` | Simplified Chinese (news) | Journalistic / report-style sentence |
+| `examples/simplified_technical.txt` | Simplified Chinese (technical) | Scientific-abstract style text with domain terminology |
+| `examples/simplified_dialogue.txt` | Simplified Chinese (dialogue) | Conversational text with full-width quotation marks |
+| `examples/simplified_poetry_classical.txt` | Classical poetry | Public-domain Tang poem with short lines |
+| `examples/simplified_numbers_data.txt` | Numeric / data text | Number- and percentage-heavy content and numeric restoration |
+| `examples/medium_simplified_paragraph.txt` | Medium-length input | Moderate compression and sequence-quality behavior |
+| `examples/long_simplified_paragraph.txt` | Longer input | Compression behavior and sequence-quality checks on a longer paragraph |
+| `examples/repeated_chars.txt` | Compression stress | Highly repetitive text and its compression behavior |
+| `examples/multiparagraph_mixed.txt` | Multi-line input | Newline and paragraph restoration across lines |
+| `examples/punctuation_mixed.txt` | Punctuation-rich input | Punctuation maps, brackets, quotation marks, and digits |
+| `examples/punctuation_fullwidth.txt` | Full-width punctuation | Restoration coverage for the full-width Chinese punctuation set |
+| `examples/mixed_alnum_symbols.txt` | Mixed content | Chinese text with English words, digits, percent signs, and symbols |
+| `examples/mixed_english_terms.txt` | Mixed content (terms) | Chinese interleaved with English technical terms and base letters |
+| `examples/mixed_dates_units.txt` | Mixed content (data) | Dates, times, room numbers, and currency units |
+| `examples/traditional_classical.txt` | Traditional/classical-style input | Direct Traditional Chinese handling |
+| `examples/traditional_variants.txt` | Traditional variants | Common Traditional characters and script preservation |
+| `examples/traditional_culture.txt` | Traditional (modern) | Modern Traditional sentence for the direct Traditional encoding path |
+
+The machine-readable `examples/manifest.csv` summarizes the same test cases. A MATLAB runner is also provided:
+
+```matlab
+run('examples/run_examples.m')
+```
+
 ## Key Results
 
 | Metric | CMC result | Notes |
@@ -58,6 +91,12 @@ CMC/
 |   |-- run_docx_test_trad_direct.m
 |   |-- run_e2e_verification.py
 |   `-- run_full_experiment.py
+|
+|-- examples/
+|   |-- README.md
+|   |-- manifest.csv
+|   |-- run_examples.m
+|   `-- lightweight Chinese text test cases
 |
 |-- metrics/
 |   `-- CSV files for density, GC, motif, homopolymer, Hamming distance, MFE, and summary tables
@@ -112,6 +151,12 @@ Run Traditional Chinese conversion-assisted encoding:
 
 ```matlab
 run_cultural_demo
+```
+
+Run the lightweight example inputs:
+
+```matlab
+run('examples/run_examples.m')
 ```
 
 For document-level tests, first place your own `.docx` files under `data_raw/` or edit the paths in the scripts, then run:
