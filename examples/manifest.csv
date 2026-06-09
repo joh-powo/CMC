@@ -1,0 +1,21 @@
+filename,category,script_form,length_class,purpose,copyright_note
+quick_test.txt,smoke_test,Simplified Chinese,short,Minimal sentence for quickly checking that the pipeline starts and returns a result,Author-written example
+smoke_single_char.txt,smoke_test,Simplified Chinese,minimal,Single character input for the smallest possible round-trip check,Author-written example
+simplified_modern.txt,simplified_modern,Simplified Chinese,short,Modern Simplified prose for ordinary text storage tests,Author-written example
+simplified_news.txt,simplified_news,Simplified Chinese,short,Journalistic style sentence representing news and report text,Author-written example
+simplified_technical.txt,simplified_technical,Simplified Chinese,medium,Scientific abstract style text with domain terminology,Author-written example
+simplified_dialogue.txt,simplified_dialogue,Simplified Chinese,short,Conversational text with full-width quotation marks,Author-written example
+simplified_poetry_classical.txt,classical_poetry,Simplified Chinese,short,Classical Tang poem for poetry and short-line input,Public-domain classical poem (Li Bai)
+simplified_numbers_data.txt,numeric_data,Simplified Chinese with digits,short,Number and percentage heavy text for numeric restoration checks,Author-written example
+medium_simplified_paragraph.txt,longer_input,Simplified Chinese,medium,Medium length paragraph for moderate compression tests,Author-written example
+long_simplified_paragraph.txt,longer_input,Simplified Chinese,long,Longer paragraph for observing compression and constraint metrics,Author-written example
+repeated_chars.txt,compression_stress,Simplified Chinese,short,Highly repetitive text for observing compression behaviour,Author-written example
+multiparagraph_mixed.txt,multiline,Simplified Chinese with English and digits,short,Multi-line input for testing newline and paragraph restoration,Author-written example
+punctuation_mixed.txt,punctuation_restoration,Simplified Chinese with punctuation,short,Checks punctuation recording and restoration with brackets quotes and numbers,Author-written example
+punctuation_fullwidth.txt,punctuation_restoration,Simplified Chinese with punctuation,medium,Full-width Chinese punctuation set for restoration coverage,Author-written example
+mixed_alnum_symbols.txt,mixed_content,Chinese English digits and symbols,short,Checks mixed Chinese English digits percent signs and hyphen-like symbols,Author-written example
+mixed_english_terms.txt,mixed_content,Chinese with English terms,short,Chinese text interleaved with English technical terms and base letters,Author-written example
+mixed_dates_units.txt,mixed_content,Chinese with dates and units,short,Chinese text with dates times room numbers and currency units,Author-written example
+traditional_classical.txt,traditional_classical,Traditional Chinese,short,Classical style Traditional input for direct Traditional processing,Public-domain classical-style sentence
+traditional_variants.txt,traditional_variants,Traditional Chinese,short,Checks common Traditional characters and script preservation,Author-written example
+traditional_culture.txt,traditional_modern,Traditional Chinese,short,Traditional sentence on cultural preservation for direct Traditional encoding,Author-written example
