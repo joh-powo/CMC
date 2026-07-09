@@ -4,6 +4,12 @@ CMC is a reproducible code and data package for encoding Chinese text into DNA s
 
 This repository is intended for academic research on source-aware DNA storage coding. It provides the encoder/decoder implementation, mapping tables, metric summaries, and publication figure generation scripts.
 
+# Link to the paper
+Paper describing this work has been received in Frontiers of Computer Science（FCS） special column “Code & Data”.
+Cited as: Liuming SHI, Ziqi LI, YanfenZHENG, XueLI, Ziniu Mu, Shihua ZHOU, Ben CAO, Bin WANG, EdmundMing KitLAI. 
+CMC: Constrained Mixed-radix Coding Tools for DNA Storage of Chinese Text. 
+Front. Comput. Sci., 2026, DOI: 10.1007/s11704-026-60971-6
+
 ## Benchmark Texts
 
 The original benchmark documents are not shipped with this repository due to copyright and redistribution considerations. To reproduce the end-to-end document tests, prepare your own `.docx` files and place them under a local `data_raw/` directory, or update the paths in:
