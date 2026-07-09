@@ -6,8 +6,11 @@ This repository is intended for academic research on source-aware DNA storage co
 
 # Link to the paper
 Paper describing this work has been received in Frontiers of Computer Science（FCS） special column “Code & Data”.
+
 Cited as: Liuming SHI, Ziqi LI, YanfenZHENG, XueLI, Ziniu Mu, Shihua ZHOU, Ben CAO, Bin WANG, EdmundMing KitLAI. 
+
 CMC: Constrained Mixed-radix Coding Tools for DNA Storage of Chinese Text. 
+
 Front. Comput. Sci., 2026, DOI: 10.1007/s11704-026-60971-6
 
 ## Benchmark Texts
